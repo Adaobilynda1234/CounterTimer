@@ -8,16 +8,21 @@ const TimerControls = ({
 }) => {
   return (
     <div className="timerControls">
-      {timerRunning ? (
-        <button onClick={pauseTimer} className="pauseButton">
-          Pause
-        </button>
-      ) : (
-        <button onClick={startTimer} className="startButton">
-          start
-        </button>
-      )}
-      <button onClick={resetTimer} className="resetButton">
+      <button
+        className="startButton"
+        onClick={startTimer}
+        disabled={timerRunning}
+      >
+        Start
+      </button>
+      <button
+        className="pauseButton"
+        onClick={pauseTimer}
+        disabled={!timerRunning}
+      >
+        Pause
+      </button>
+      <button className="resetButton" onClick={resetTimer}>
         Reset
       </button>
     </div>

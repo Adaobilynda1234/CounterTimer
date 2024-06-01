@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TimerInput = ({ setTime }) => {
+const TimerInput = ({ handleTimer }) => {
   //defining the state
   const [inputValue, setInputValue] = useState("");
   //defining the function
@@ -12,7 +12,7 @@ const TimerInput = ({ setTime }) => {
     e.preventDefault();
     const seconds = parseInt(inputValue, 10);
     if (!isNaN(seconds) && seconds > 0) {
-      setTime(seconds);
+      handleTimer(seconds);
       setInputValue("");
     }
   };
@@ -22,9 +22,11 @@ const TimerInput = ({ setTime }) => {
         type="number"
         value={inputValue}
         onChange={handleChange}
-        placeholder="Enter seconds"
+        placeholder="Enter time in  seconds"
       />
-      <button type="submit">Set Timer</button>
+      <button className="submit" type="submit">
+        Set Timer
+      </button>
     </form>
   );
 };
