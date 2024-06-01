@@ -16,7 +16,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 350px;
+  height: 320px;
 }
 
 input {
@@ -24,6 +24,8 @@ input {
   font-size: 16px;
   margin-right: 10px;
   border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 .submit {
@@ -55,6 +57,10 @@ input {
   cursor: pointer;
 }
 
+.startButton:hover {
+  background-color: #3e8e41;
+}
+
 .timerControls .pauseButton {
   background-color: #ffc107;
   margin-left: 10px;
@@ -63,6 +69,10 @@ input {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.pauseButton:hover {
+  background-color: #3e8e41;
 }
 
 .timerControls .resetButton {
