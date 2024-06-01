@@ -17,7 +17,7 @@ const TimerInput = ({ handleTimer }) => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form classname="timerInput" onSubmit={handleSubmit}>
       <input
         type="number"
         value={inputValue}

@@ -89,3 +89,26 @@ input {
 .resetButton:hover {
   background-color: #3e8e41;
 }
+
+/* Media query for screen widths between 340px and 370px */
+@media (max-width: 380px) {
+  .container {
+    max-width: 380px;
+  }
+
+  .container form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+  }
+
+  input {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .timerInput .submit {
+    padding: 4px 8px;
+    margin-top: 50px;
+    width: 20%;
+  }
+}
