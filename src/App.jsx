@@ -44,7 +44,7 @@ function App() {
   const resetTimer = () => {
     clearInterval(timerRef.current);
     setTimerRunning(false);
-    setCounterInterval(0);
+    setCounterInterval(time);
   };
 
   return (
